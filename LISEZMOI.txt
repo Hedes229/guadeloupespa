@@ -1,0 +1,75 @@
+════════════════════════════════════════════════════════════════
+  LE SPA DE BLONZAC — REFONTE COMPLÈTE DU SITE
+  Dossier prêt à déployer sur Netlify
+════════════════════════════════════════════════════════════════
+
+
+CONTENU DU DOSSIER
+──────────────────
+  index.html        Page d'accueil
+  photos.html       Galerie (19 photos, lightbox)
+  equipement.html   Les 17 équipements du bungalow
+  acces.html        Adresse, GPS, carte Google Maps
+  commerces.html    Commerces de Goyave + 10 partenaires
+  tarifs.html       Les 3 formules et services inclus
+  livre-dor.html    Les 9 témoignages
+  contact.html      Formulaire de réservation + carte
+
+  css/              Feuilles de style (polices auto-hébergées incluses)
+  js/               Scripts (slider, lightbox, animations, formulaire)
+  images/           Les 19 photos + logo du site d'origine
+
+  netlify.toml      Configuration Netlify (redirections, cache, sécurité)
+  robots.txt        Directives pour les moteurs de recherche
+  sitemap.xml       Plan du site
+  LISEZMOI.txt      Ce fichier
+
+
+METTRE EN LIGNE SUR NETLIFY (2 minutes)
+───────────────────────────────────────
+  1. Décompressez cette archive (clic droit > Extraire tout).
+  2. Allez sur https://app.netlify.com/drop
+  3. Glissez-déposez le DOSSIER "guadeloupe-spa" dans la zone
+     indiquée de la page.
+  4. Netlify publie le site immédiatement et vous donne une
+     adresse du type : https://xxxxx.netlify.app
+
+  Aucune configuration n'est nécessaire : le site est statique,
+  il n'y a rien à compiler.
+
+  Ensuite, dans Site settings > Change site name, vous pouvez
+  choisir un sous-domane personnalisé, puis rattacher le nom de
+  domaine guadeloupespa.com dans Domain management.
+
+
+POINT D'ATTENTION — LE FORMULAIRE DE CONTACT
+───────────────────────────────────────────
+  Le formulaire de la page Contact prépare un e-mail pré-rempli
+  vers nouka971@gmail.com via le logiciel de messagerie du
+  visiteur. Il fonctionne donc tel quel, sans serveur.
+
+  Si vous préférez recevoir les demandes directement dans une
+  boîte mail sans passer par le logiciel du visiteur, ajoutez un
+  formulaire Netlify :
+    - dans contact.html, ajoutez  data-netlify="true"
+      et un champ caché  <input type="hidden" name="form-name"
+      value="contact">  à la balise <form>
+    - les demandes arriveront alors dans l'onglet "Forms"
+      de votre tableau de bord Netlify (gratuit jusqu'à
+      100 envois par mois).
+
+  Vous pouvez aussi simplement remplacer le bloc <form> par un
+  lien mailto:nouka971@gmail.com ou par votre numéro de téléphone.
+
+
+CE QUI A ÉTÉ CONSERVÉ DU SITE D'ORIGINE
+───────────────────────────────────────
+  Toutes les informations réelles ont été reprises à l'identique :
+  nom, adresse, téléphones, e-mail, coordonnées GPS, tarifs,
+  équipements, commerces, partenaires, sites touristiques,
+  livre d'or et les 19 photos originales.
+
+  Le contenu est identique ; seule la présentation a été refondue.
+
+
+════════════════════════════════════════════════════════════════

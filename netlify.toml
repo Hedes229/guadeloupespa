@@ -1,0 +1,86 @@
+# Configuration Netlify — Le Spa de Blonzac
+# Site statique : aucun build nécessaire, le dossier courant est publié tel quel.
+
+[build]
+  publish = "."
+
+# --- Redirections : URLs propres ---
+[[redirects]]
+  from = "/photos-spa-guadeloupe.php"
+  to = "/photos.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/equipement-bungalow-jacuzzi-guadeloupe.php"
+  to = "/equipement.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/acces-location-spa-guadeloupe.php"
+  to = "/acces.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commerces-goyave-guadeloupe.php"
+  to = "/commerces.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tarif-location-guadeloupe-spa.php"
+  to = "/tarifs.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/livredor.php"
+  to = "/livre-dor.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.php"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.php"
+  to = "/index.html"
+  status = 301
+  force = true
+
+# --- En-têtes de sécurité ---
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# --- Cache long pour les assets ---
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# --- Polices auto-hébergées ---
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
